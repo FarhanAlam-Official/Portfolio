@@ -41,6 +41,25 @@ A stunning, modern portfolio website built with Next.js 16, featuring smooth ani
 - **[Vercel Analytics](https://vercel.com/analytics)** - Performance monitoring
 - **[PNPM](https://pnpm.io/)** - Fast, efficient package manager
 
+## 🎯 Customization
+
+**Want to make this portfolio yours?** 
+
+All your personal information is centralized in **ONE FILE**: `lib/data.ts`
+
+Simply update this file with your:
+- Personal info, bio, and contact details
+- Work experience and education
+- Skills and proficiency levels
+- Testimonials and certifications
+- Social media links
+
+Then update your projects in `lib/projects-data.ts`
+
+📖 **[Read the Complete Customization Guide →](CUSTOMIZATION_GUIDE.md)**
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -67,7 +86,15 @@ A stunning, modern portfolio website built with Next.js 16, featuring smooth ani
    yarn install
    ```
 
-3. **Run the development server**
+3. **Customize your data**
+
+   ```bash
+   # Edit lib/data.ts with your personal information
+   # Edit lib/projects-data.ts with your projects
+   # Replace images in /public folder
+   ```
+
+4. **Run the development server**
 
    ```bash
    pnpm dev

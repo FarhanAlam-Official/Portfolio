@@ -6,6 +6,9 @@ import "./globals.css"
 
 import { Geist, Geist_Mono, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4, Space_Grotesk } from 'next/font/google'
 
+// Import centralized data
+import { personalInfo } from "@/lib/data"
+
 // Initialize fonts
 const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
 const _geistMono = V0_Font_Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
@@ -14,14 +17,13 @@ const _sourceSerif_4 = V0_Font_Source_Serif_4({ subsets: ['latin'], weight: ["20
 const _spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Farhan Alam | Full-Stack Developer & Designer",
-  description:
-    "Portfolio of Farhan Alam - A passionate full-stack developer crafting beautiful, performant web experiences.",
-  keywords: ["developer", "portfolio", "full-stack", "react", "nextjs", "designer"],
-  authors: [{ name: "Farhan Alam" }],
+  title: `${personalInfo.name} | ${personalInfo.title}`,
+  description: personalInfo.bio,
+  keywords: personalInfo.seo.keywords,
+  authors: [{ name: personalInfo.name }],
   openGraph: {
-    title: "Farhan Alam | Full-Stack Developer & Designer",
-    description: "Crafting beautiful, performant web experiences",
+    title: `${personalInfo.name} | ${personalInfo.title}`,
+    description: personalInfo.tagline,
     type: "website",
   },
     generator: 'v0.app'
