@@ -1,0 +1,189 @@
+export const projects = [
+  {
+    id: "financeflow",
+    title: "FinanceFlow",
+    subtitle: "Personal Finance Platform",
+    description:
+      "A comprehensive personal finance management platform with real-time analytics, budget tracking, and AI-powered insights.",
+    longDescription: `FinanceFlow is a next-generation personal finance platform that helps users take control of their financial future. Built with a focus on user experience and data security, it provides real-time insights into spending patterns, investment performance, and savings goals.
+
+The platform features an AI-powered recommendation engine that analyzes spending habits and provides personalized suggestions for improving financial health. With support for multiple bank connections, automated categorization, and beautiful visualizations, users can finally understand where their money goes.`,
+    image: "/finance-dashboard-dark-theme-purple-accents.jpg",
+    category: "Web Apps",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "AI", "Stripe", "Plaid"],
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com",
+    featured: true,
+    metrics: { users: "10k+", performance: "99%", satisfaction: "4.9" },
+    year: "2024",
+    role: "Full-Stack Developer",
+    duration: "6 months",
+    challenges: [
+      "Integrating multiple bank APIs with different authentication flows",
+      "Building a real-time notification system for budget alerts",
+      "Implementing secure data encryption for sensitive financial data",
+    ],
+    solutions: [
+      "Created a unified adapter pattern to normalize different bank API responses",
+      "Used WebSocket connections with Redis pub/sub for instant notifications",
+      "Implemented AES-256 encryption with secure key management via AWS KMS",
+    ],
+    testimonial: {
+      quote: "FinanceFlow completely changed how I manage my money. The AI insights are incredibly accurate!",
+      author: "Sarah J.",
+      role: "Early Adopter",
+    },
+  },
+  {
+    id: "collabspace",
+    title: "CollabSpace",
+    subtitle: "Team Collaboration Platform",
+    description:
+      "Real-time collaborative workspace for remote teams. Features video calls, whiteboarding, and document collaboration.",
+    longDescription: `CollabSpace revolutionizes how remote teams work together by providing an all-in-one collaboration platform. Unlike traditional tools that require switching between multiple apps, CollabSpace integrates video conferencing, real-time document editing, and infinite whiteboarding into a seamless experience.
+
+The platform was built with performance in mind, supporting teams of up to 100 concurrent users on a single whiteboard with sub-100ms latency. Advanced features include screen sharing, recording, breakout rooms, and AI-powered meeting summaries.`,
+    image: "/collaboration-workspace-app-dark-theme.jpg",
+    category: "Web Apps",
+    tags: ["React", "WebRTC", "Socket.io", "Redis", "MongoDB"],
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com",
+    featured: true,
+    metrics: { users: "5k+", performance: "98%", satisfaction: "4.8" },
+    year: "2023",
+    role: "Lead Developer",
+    duration: "8 months",
+    challenges: [
+      "Achieving real-time sync with minimal latency across global users",
+      "Handling video stream quality adaptation for varying network conditions",
+      "Building a conflict-free document editing system",
+    ],
+    solutions: [
+      "Implemented CRDT-based sync algorithms with regional edge servers",
+      "Built adaptive bitrate streaming with automatic quality switching",
+      "Used operational transformation for seamless collaborative editing",
+    ],
+  },
+  {
+    id: "healthpulse",
+    title: "HealthPulse",
+    subtitle: "Health & Fitness Tracker",
+    description:
+      "Mobile-first health tracking application with wearable device integration and personalized wellness recommendations.",
+    longDescription: `HealthPulse is a comprehensive health tracking platform that connects with popular wearable devices to provide holistic health insights. From step counting to sleep analysis, heart rate monitoring to workout tracking, it provides a complete picture of user wellness.
+
+The AI recommendation engine learns from user data to provide personalized suggestions for improving sleep quality, increasing activity levels, and achieving fitness goals. Integration with health professionals allows for secure sharing of health metrics.`,
+    image: "/health-fitness-mobile-app-dark-theme.jpg",
+    category: "Mobile",
+    tags: ["React Native", "Node.js", "MongoDB", "ML", "HealthKit"],
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com",
+    featured: false,
+    metrics: { users: "25k+", performance: "97%", satisfaction: "4.7" },
+    year: "2023",
+    role: "Mobile Developer",
+    duration: "5 months",
+    challenges: [
+      "Integrating with multiple wearable device APIs",
+      "Building accurate ML models for health predictions",
+      "Ensuring HIPAA compliance for health data",
+    ],
+    solutions: [
+      "Created a plugin architecture for easy wearable integration",
+      "Trained custom ML models using TensorFlow Lite for on-device inference",
+      "Implemented end-to-end encryption and audit logging for compliance",
+    ],
+  },
+  {
+    id: "artifyai",
+    title: "ArtifyAI",
+    subtitle: "AI Art Generator",
+    description:
+      "AI-powered design tool that generates unique artwork from text prompts. Includes style transfer and image editing.",
+    longDescription: `ArtifyAI brings the power of generative AI to creative professionals and hobbyists alike. Using state-of-the-art diffusion models, users can generate stunning artwork from simple text descriptions, apply style transfers to existing images, and edit images with natural language instructions.
+
+The platform includes advanced features like outpainting, inpainting, and upscaling, making it a complete creative suite. A marketplace allows artists to share and monetize their AI-generated creations.`,
+    image: "/ai-art-generator-interface-dark-purple.jpg",
+    category: "Design",
+    tags: ["Python", "TensorFlow", "FastAPI", "React", "AWS"],
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com",
+    featured: true,
+    metrics: { users: "15k+", performance: "95%", satisfaction: "4.9" },
+    year: "2024",
+    role: "AI/ML Engineer",
+    duration: "4 months",
+    challenges: [
+      "Optimizing inference speed for real-time generation",
+      "Building a scalable queue system for batch processing",
+      "Implementing content moderation for generated images",
+    ],
+    solutions: [
+      "Used model quantization and TensorRT for 3x faster inference",
+      "Built a distributed task queue with Celery and Redis",
+      "Integrated NSFW detection and prompt filtering systems",
+    ],
+  },
+  {
+    id: "devtoolkit",
+    title: "DevToolkit",
+    subtitle: "Developer Utilities",
+    description:
+      "Open-source collection of developer tools including code formatters, converters, and productivity utilities.",
+    longDescription: `DevToolkit is a comprehensive suite of web-based developer utilities designed to boost productivity. From JSON/YAML converters to regex testers, Base64 encoders to JWT decoders, it provides all the tools developers need in one place.
+
+Built as an open-source project, it has gained significant traction in the developer community with contributions from developers worldwide. The modular architecture makes it easy to add new tools and customize existing ones.`,
+    image: "/developer-tools-utilities-dark-theme.jpg",
+    category: "Open Source",
+    tags: ["TypeScript", "Rust", "WebAssembly", "React"],
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com",
+    featured: false,
+    metrics: { stars: "2.5k", forks: "400+", contributors: "50+" },
+    year: "2022",
+    role: "Creator & Maintainer",
+    duration: "Ongoing",
+    challenges: [
+      "Building performant tools that work entirely in the browser",
+      "Managing an active open-source community",
+      "Ensuring cross-browser compatibility",
+    ],
+    solutions: [
+      "Used WebAssembly for compute-intensive operations",
+      "Established clear contribution guidelines and code review process",
+      "Implemented comprehensive E2E testing across browsers",
+    ],
+  },
+  {
+    id: "ecotrack",
+    title: "EcoTrack",
+    subtitle: "Sustainability Dashboard",
+    description:
+      "Sustainability tracking platform helping businesses monitor and reduce their carbon footprint with actionable insights.",
+    longDescription: `EcoTrack empowers businesses to understand and reduce their environmental impact. By connecting with utility providers, supply chain systems, and IoT sensors, it provides a comprehensive view of a company's carbon footprint.
+
+The platform generates detailed ESG reports, identifies opportunities for emission reduction, and tracks progress toward sustainability goals. Integration with carbon offset providers allows companies to take immediate action on their environmental commitments.`,
+    image: "/sustainability-eco-dashboard-dark-green-accents.jpg",
+    category: "Web Apps",
+    tags: ["Vue.js", "GraphQL", "PostgreSQL", "D3.js", "IoT"],
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com",
+    featured: false,
+    metrics: { users: "3k+", performance: "98%", satisfaction: "4.8" },
+    year: "2023",
+    role: "Full-Stack Developer",
+    duration: "7 months",
+    challenges: [
+      "Aggregating data from disparate sources in real-time",
+      "Building accurate carbon calculation models",
+      "Creating intuitive visualizations for complex data",
+    ],
+    solutions: [
+      "Built ETL pipelines with Apache Kafka for real-time data ingestion",
+      "Collaborated with environmental scientists for validated calculation models",
+      "Used D3.js to create interactive, drill-down capable visualizations",
+    ],
+  },
+]
+
+export type Project = (typeof projects)[0]
