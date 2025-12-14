@@ -3,6 +3,7 @@
 import { motion, useMotionValue, useSpring } from "framer-motion"
 import { useRef, type MouseEvent } from "react"
 import { Github, Linkedin, Twitter, Mail, type LucideIcon } from "lucide-react"
+import { personalInfo } from "@/lib/data"
 
 interface MagneticSocialProps {
   icon: LucideIcon
@@ -63,10 +64,10 @@ function MagneticIcon({ icon: Icon, href, label, color }: MagneticSocialProps) {
 
 export function MagneticSocial() {
   const socials = [
-    { icon: Github, href: "https://github.com", label: "GitHub", color: "#8b5cf6" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", color: "#0077b5" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter", color: "#1da1f2" },
-    { icon: Mail, href: "mailto:hello@example.com", label: "Email", color: "#ea4335" },
+    { icon: Github, href: personalInfo.social.github, label: "GitHub", color: "#8b5cf6" },
+    { icon: Linkedin, href: personalInfo.social.linkedin, label: "LinkedIn", color: "#0077b5" },
+    { icon: Twitter, href: personalInfo.social.twitter, label: "Twitter", color: "#1da1f2" },
+    { icon: Mail, href: `mailto:${personalInfo.contact.email}`, label: "Email", color: "#ea4335" },
   ]
 
   return (

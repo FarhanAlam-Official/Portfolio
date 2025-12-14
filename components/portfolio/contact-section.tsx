@@ -9,17 +9,18 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { SectionHeader } from "./section-header"
+import { personalInfo } from "@/lib/data"
 
-const contactInfo = [
-  { icon: Mail, label: "Email", value: "hello@alexchen.dev", href: "mailto:hello@alexchen.dev" },
-  { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-  { icon: MapPin, label: "Location", value: "San Francisco, CA", href: null },
+const getContactInfo = () => [
+  { icon: Mail, label: "Email", value: personalInfo.contact.email, href: `mailto:${personalInfo.contact.email}` },
+  { icon: Phone, label: "Phone", value: personalInfo.contact.phone, href: `tel:${personalInfo.contact.phone?.replace(/\D/g, '')}` },
+  { icon: MapPin, label: "Location", value: personalInfo.contact.location, href: null },
 ]
 
-const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+const getSocialLinks = () => [
+  { icon: Github, href: personalInfo.social.github, label: "GitHub" },
+  { icon: Linkedin, href: personalInfo.social.linkedin, label: "LinkedIn" },
+  { icon: Twitter, href: personalInfo.social.twitter, label: "Twitter" },
 ]
 
 export function ContactSection() {
@@ -31,6 +32,9 @@ export function ContactSection() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const contactInfo = getContactInfo()
+  const socialLinks = getSocialLinks()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

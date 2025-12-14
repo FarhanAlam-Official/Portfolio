@@ -7,6 +7,7 @@ import { Heart, ArrowUp, Github, Linkedin, Twitter, Mail, Send, Code2, Sparkles 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { personalInfo } from "@/lib/data"
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -22,16 +23,18 @@ const projectLinks = [
   { label: "UI/UX Design", href: "/projects" },
 ]
 
-const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Mail, href: "mailto:hello@alexchen.dev", label: "Email" },
+const getSocialLinks = () => [
+  { icon: Github, href: personalInfo.social.github, label: "GitHub" },
+  { icon: Linkedin, href: personalInfo.social.linkedin, label: "LinkedIn" },
+  { icon: Twitter, href: personalInfo.social.twitter, label: "Twitter" },
+  { icon: Mail, href: `mailto:${personalInfo.contact.email}`, label: "Email" },
 ]
 
 export function Footer() {
   const [email, setEmail] = useState("")
   const [isHoveringTop, setIsHoveringTop] = useState(false)
+
+  const socialLinks = getSocialLinks()
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -65,13 +68,13 @@ export function Footer() {
               <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary/40 shadow-lg shadow-primary/20 group-hover:ring-primary/60 group-hover:shadow-primary/30 transition-all">
                 <Image
                   src="/user.png"
-                  alt="Farhan Alam"
+                  alt={personalInfo.name}
                   width={48}
                   height={48}
                   className="object-cover"
                 />
               </div>
-              <span className="text-foreground text-lg font-bold tracking-widest uppercase">Farhan Alam</span>
+              <span className="text-foreground text-lg font-bold tracking-widest uppercase">{personalInfo.name}</span>
             </Link>
 
             {/* Headline */}

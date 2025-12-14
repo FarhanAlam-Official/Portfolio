@@ -2,54 +2,27 @@
 
 import { motion } from "framer-motion"
 import { SectionHeader } from "./section-header"
+import { skills } from "@/lib/data"
 
 const skillCategories = [
   {
     title: "Frontend",
-    skills: [
-      { name: "React / Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Tailwind CSS", level: 95 },
-      { name: "Framer Motion", level: 85 },
-    ],
+    skills: skills.frameworks.filter(s => ['React', 'Next.js', 'Vue.js', 'Tailwind CSS'].some(tech => s.name.includes(tech))).slice(0, 4),
   },
   {
     title: "Backend",
-    skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Python", level: 80 },
-      { name: "PostgreSQL", level: 85 },
-      { name: "GraphQL", level: 80 },
-    ],
+    skills: [...skills.frameworks.filter(s => ['Node.js', 'Express'].includes(s.name)), ...skills.languages.filter(s => ['Python'].includes(s.name))].slice(0, 4),
   },
   {
     title: "Tools & Others",
-    skills: [
-      { name: "Git / GitHub", level: 95 },
-      { name: "Figma", level: 85 },
-      { name: "Docker", level: 75 },
-      { name: "AWS / Vercel", level: 85 },
-    ],
+    skills: skills.tools.slice(0, 4),
   },
 ]
 
 const technologies = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Node.js",
-  "Python",
-  "PostgreSQL",
-  "MongoDB",
-  "GraphQL",
-  "Tailwind",
-  "Framer",
-  "Figma",
-  "Git",
-  "Docker",
-  "AWS",
-  "Vercel",
-  "Redis",
+  ...skills.languages.slice(0, 4).map(s => s.name),
+  ...skills.frameworks.slice(0, 6).map(s => s.name),
+  ...skills.tools.slice(0, 6).map(s => s.name),
 ]
 
 export function SkillsSection() {

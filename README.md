@@ -43,11 +43,12 @@ A stunning, modern portfolio website built with Next.js 16, featuring smooth ani
 
 ## 🎯 Customization
 
-**Want to make this portfolio yours?** 
+**Want to make this portfolio yours?**
 
 All your personal information is centralized in **ONE FILE**: `lib/data.ts`
 
 Simply update this file with your:
+
 - Personal info, bio, and contact details
 - Work experience and education
 - Skills and proficiency levels
@@ -104,7 +105,7 @@ Then update your projects in `lib/projects-data.ts`
    yarn dev
    ```
 
-4. **Open your browser**
+4.**Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 📦 Build for Production

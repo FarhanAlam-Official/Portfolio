@@ -4,17 +4,18 @@ import { motion } from "framer-motion"
 import { Download, MapPin, Calendar, Briefcase } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionHeader } from "./section-header"
+import { personalInfo, stats as portfolioStats } from "@/lib/data"
 
-const stats = [
-  { value: "5+", label: "Years Experience" },
-  { value: "50+", label: "Projects Completed" },
-  { value: "30+", label: "Happy Clients" },
+const componentStats = [
+  { value: `${portfolioStats.yearsOfExperience}+`, label: "Years Experience" },
+  { value: `${portfolioStats.projectsCompleted}+`, label: "Projects Completed" },
+  { value: `${portfolioStats.happyClients}+`, label: "Happy Clients" },
   { value: "15+", label: "Awards Won" },
 ]
 
 const info = [
-  { icon: MapPin, label: "San Francisco, CA" },
-  { icon: Calendar, label: "Available from Jan 2025" },
+  { icon: MapPin, label: personalInfo.contact.location },
+  { icon: Calendar, label: personalInfo.contact.availability },
   { icon: Briefcase, label: "Open to Remote" },
 ]
 
@@ -38,7 +39,7 @@ export function AboutSection() {
               <div className="absolute inset-0 bg-card rounded-3xl border border-border overflow-hidden">
                 <img
                   src="/professional-developer-portrait-dark-background-pu.jpg"
-                  alt="Farhan Alam - Full-Stack Developer"
+                  alt={`${personalInfo.name} - ${personalInfo.title}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -50,7 +51,7 @@ export function AboutSection() {
                 transition={{ delay: 0.4 }}
                 className="absolute -bottom-4 -right-4 bg-card border border-border rounded-2xl p-4 shadow-lg"
               >
-                <div className="text-2xl font-bold text-primary">5+</div>
+                <div className="text-2xl font-bold text-primary">{portfolioStats.yearsOfExperience}+</div>
                 <div className="text-sm text-muted-foreground">Years Exp.</div>
               </motion.div>
             </div>
@@ -90,9 +91,11 @@ export function AboutSection() {
               ))}
             </div>
 
-            <Button size="lg" className="gap-2">
-              <Download className="w-4 h-4" />
-              Download Resume
+            <Button size="lg" className="gap-2" asChild>
+              <a href={personalInfo.resume} download>
+                <Download className="w-4 h-4" />
+                Download Resume
+              </a>
             </Button>
           </motion.div>
         </div>
@@ -105,7 +108,7 @@ export function AboutSection() {
           transition={{ duration: 0.6 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20"
         >
-          {stats.map((stat, index) => (
+          {componentStats.map((stat, index) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}

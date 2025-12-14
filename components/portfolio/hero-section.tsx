@@ -7,6 +7,7 @@ import { Hero3DScene } from "./hero-3d-scene"
 import { AnimatedText } from "./animated-text"
 import { GlowingButton } from "./glowing-button"
 import { MagneticSocial } from "./magnetic-social"
+import { personalInfo } from "@/lib/data"
 
 export function HeroSection() {
   return (
@@ -43,7 +44,7 @@ export function HeroSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                Farhan Alam
+                {personalInfo.name}
               </motion.span>
             </motion.h1>
 

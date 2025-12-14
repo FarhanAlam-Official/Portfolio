@@ -18,6 +18,7 @@
 ## 🎯 Essential Updates (Must Do!)
 
 ### 1. Personal Info (5 minutes)
+
 ```typescript
 // lib/data.ts - Lines 8-18
 export const personalInfo = {
@@ -29,6 +30,7 @@ export const personalInfo = {
 ```
 
 ### 2. Contact (2 minutes)
+
 ```typescript
 // lib/data.ts - Lines 43-48
 contact: {
@@ -38,6 +40,7 @@ contact: {
 ```
 
 ### 3. Social Links (3 minutes)
+
 ```typescript
 // lib/data.ts - Lines 51-65
 social: {
@@ -47,6 +50,7 @@ social: {
 ```
 
 ### 4. Replace Profile Photo (1 minute)
+
 - Replace `/public/user.png` with your photo
 - Recommended size: 400x400px
 - Format: PNG or JPG
@@ -54,6 +58,7 @@ social: {
 ## 📝 Recommended Updates (Should Do)
 
 ### 5. Work Experience (15 minutes)
+
 ```typescript
 // lib/data.ts - Lines 80-165
 export const experience = [
@@ -68,6 +73,7 @@ export const experience = [
 ```
 
 ### 6. Skills (10 minutes)
+
 ```typescript
 // lib/data.ts - Lines 205-255
 languages: [
@@ -77,6 +83,7 @@ languages: [
 ```
 
 ### 7. Projects (30 minutes)
+
 ```typescript
 // lib/projects-data.ts
 {
@@ -91,12 +98,15 @@ languages: [
 ## 🎨 Optional Updates (Nice to Have)
 
 ### 8. Education
+
 - `lib/data.ts` - Lines 170-200
 
 ### 9. Testimonials
+
 - `lib/data.ts` - Lines 265-305
 
 ### 10. Certifications
+
 - `lib/data.ts` - Lines 310-350
 
 ## ⚡ Quick Commands
@@ -115,6 +125,7 @@ pnpm start
 ## 🔍 Testing Checklist
 
 After making changes, check:
+
 - [ ] Homepage shows your name
 - [ ] About page has your bio
 - [ ] Contact page has your email
@@ -126,15 +137,19 @@ After making changes, check:
 ## 💡 Common Issues
 
 **Problem:** Changes don't appear
+
 - **Solution:** Restart dev server (`Ctrl+C` then `pnpm dev`)
 
 **Problem:** TypeScript errors
+
 - **Solution:** Check for typos in `lib/data.ts`
 
 **Problem:** Images not showing
+
 - **Solution:** Verify images exist in `/public` folder
 
 **Problem:** Broken links
+
 - **Solution:** Check URLs have `https://` prefix
 
 ## 📱 Before Going Live
@@ -151,7 +166,7 @@ After making changes, check:
 - [ ] Remove COMMIT_PLAN.md
 - [ ] Update README.md
 
-## 🎉 You're Done When...
+## 🎉 You're Done When
 
 ✅ Your name appears everywhere (not "Farhan Alam")
 ✅ All social links point to YOUR profiles

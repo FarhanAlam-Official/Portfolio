@@ -10,7 +10,7 @@ This makes it super easy to manage your portfolio! Just edit this one file and a
 
 ## 📁 File Structure
 
-```
+```bash
 lib/
 ├── data.ts          ← 🎯 UPDATE THIS FILE! (Your personal info)
 └── projects-data.ts ← Your projects (keep this separate for organization)
@@ -224,6 +224,7 @@ export const stats = {
 Projects are still in `lib/projects-data.ts` - this keeps them organized separately.
 
 Update each project with:
+
 - Your project details
 - Real screenshots (add to `/public`)
 - Actual GitHub URLs
@@ -233,7 +234,7 @@ Update each project with:
 
 ## 🖼️ Images to Replace
 
-### In `/public` folder:
+### In `/public` folder
 
 1. **Your Photos:**
    - `user.png` - Your main profile photo (used as favicon too)
@@ -267,11 +268,12 @@ After updating `lib/data.ts`, verify these pages:
 ## 🚀 Testing Your Changes
 
 1. **Start the dev server:**
+
    ```bash
    pnpm dev
    ```
 
-2. **Visit:** http://localhost:3000
+2. **Visit:** <http://localhost:3000>
 
 3. **Check each page** to ensure your data appears correctly
 
@@ -282,25 +284,31 @@ After updating `lib/data.ts`, verify these pages:
 ## 💡 Pro Tips
 
 ### Tip 1: Keep it Updated
+
 Update `lib/data.ts` whenever you:
+
 - Get a new job
 - Complete a new project
 - Learn a new skill
 - Receive a testimonial
 
 ### Tip 2: Be Honest
+
 Don't inflate your skill levels. Be realistic:
+
 - 90-100: Expert level
 - 70-89: Proficient
 - 50-69: Intermediate
 - 30-49: Beginner
 
 ### Tip 3: Use Real Testimonials
+
 - Reach out to past clients/colleagues
 - Ask for specific feedback
 - Include their real names and roles (with permission)
 
 ### Tip 4: Professional Photos
+
 - Use high-quality images
 - Professional headshot recommended
 - Consistent style across all photos
@@ -330,6 +338,7 @@ export const blog = {
 ## 📞 Need Help?
 
 If you get stuck:
+
 1. Check the console for errors (`F12` in browser)
 2. Make sure all fields in `lib/data.ts` are filled correctly
 3. Verify no typos in your social media URLs
@@ -337,9 +346,10 @@ If you get stuck:
 
 ---
 
-## 🎉 You're All Set!
+## 🎉 You're All Set
 
 Your portfolio is now personalized! Remember:
+
 - **One file to rule them all:** `lib/data.ts`
 - Update it regularly
 - Keep it professional

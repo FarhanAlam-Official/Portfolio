@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { personalInfo } from "@/lib/data"
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -69,7 +70,7 @@ export function Navigation() {
                   <div className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden ring-2 ring-primary/40 shadow-lg shadow-primary/20">
                     <Image
                       src="/user.png"
-                      alt="Farhan Alam"
+                      alt={personalInfo.name}
                       width={40}
                       height={40}
                       className="object-cover"
@@ -77,7 +78,7 @@ export function Navigation() {
                     />
                   </div>
                   <span className="hidden sm:block text-sm md:text-base font-bold tracking-wider uppercase text-foreground">
-                    Farhan Alam
+                    {personalInfo.name}
                   </span>
                 </motion.div>
               </Link>
