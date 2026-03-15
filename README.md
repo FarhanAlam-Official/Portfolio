@@ -240,3 +240,5 @@ Farhan Alam
 ---
 
 ⭐ If you like this project, please give it a star on GitHub!
+
+<!-- init: project scaffold -->
