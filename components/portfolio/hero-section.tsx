@@ -195,3 +195,5 @@ export function HeroSection() {
     </section>
   )
 }
+
+// hero: animated headline + CTA
