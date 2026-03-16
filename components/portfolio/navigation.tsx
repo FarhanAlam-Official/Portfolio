@@ -230,3 +230,5 @@ export function Navigation() {
     </>
   )
 }
+
+// nav: responsive + active link
