@@ -301,3 +301,4 @@ export function Footer() {
     </footer>
   )
 }
+// footer: social links + sitemap
