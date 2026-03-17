@@ -99,3 +99,5 @@ export function ExperienceSection() {
     </section>
   )
 }
+
+// experience: timeline layout
