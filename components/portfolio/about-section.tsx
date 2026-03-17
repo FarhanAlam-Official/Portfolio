@@ -128,3 +128,5 @@ export function AboutSection() {
     </section>
   )
 }
+
+// about: bio + stats grid
