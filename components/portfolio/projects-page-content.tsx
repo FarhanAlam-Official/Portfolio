@@ -5,7 +5,7 @@ import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { ExternalLink, Github, ArrowRight, Calendar, Clock, Users } from "lucide-react"
 import { SectionHeader } from "./section-header"
-import { projects } from "@/lib/projects-data"
+import { projects } from "@/lib/content-reader"
 
 const categories = ["All", "Web Apps", "Mobile", "Design", "Open Source"]
 
@@ -156,7 +156,7 @@ export function ProjectsPageContent() {
                   {/* Metrics & CTA */}
                   <div className="flex items-center justify-between pt-4 border-t border-border">
                     <div className="flex gap-4">
-                      {Object.entries(project.metrics)
+                      {Object.entries(project.metrics ?? {})
                         .slice(0, 3)
                         .map(([key, value]) => (
                           <div key={key} className="text-center">
@@ -182,3 +182,5 @@ export function ProjectsPageContent() {
     </div>
   )
 }
+
+// projects: filter tabs
