@@ -126,3 +126,5 @@ export function HomeAboutPreview() {
     </section>
   )
 }
+
+// home: about preview
