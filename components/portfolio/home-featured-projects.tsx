@@ -183,3 +183,5 @@ export function HomeFeaturedProjects() {
     </section>
   )
 }
+
+// home: featured projects
