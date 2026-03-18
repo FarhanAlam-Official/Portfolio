@@ -15,8 +15,8 @@ import {
   ArrowRight,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import type { Project } from "@/lib/projects-data"
-import { projects } from "@/lib/projects-data"
+import type { Project } from "@/lib/content-reader"
+import { projects } from "@/lib/content-reader"
 
 interface ProjectDetailContentProps {
   project: Project
@@ -227,7 +227,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
               {/* Metrics */}
               <h4 className="text-sm font-medium text-muted-foreground mb-3">Key Metrics</h4>
               <div className="grid grid-cols-3 gap-3">
-                {Object.entries(project.metrics).map(([key, value]) => (
+                {Object.entries(project.metrics ?? {}).map(([key, value]) => (
                   <div key={key} className="text-center p-3 bg-secondary/30 rounded-lg">
                     <div className="text-lg font-bold text-primary">{value}</div>
                     <div className="text-xs text-muted-foreground capitalize">{key}</div>
@@ -272,3 +272,5 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
     </div>
   )
 }
+
+// project-detail: image gallery
