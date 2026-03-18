@@ -233,3 +233,5 @@ export function ContactSection() {
     </section>
   )
 }
+
+// contact: validation + email
