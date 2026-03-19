@@ -77,3 +77,5 @@ export function CustomCursor() {
     </>
   )
 }
+
+// cursor: magnetic effect
