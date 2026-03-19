@@ -52,3 +52,5 @@ export function TypingAnimation({
     </span>
   )
 }
+
+// typing: typewriter animation
