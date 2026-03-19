@@ -98,3 +98,5 @@ export function ParticlesBackground() {
     <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style={{ background: "transparent" }} />
   )
 }
+
+// particles: canvas animation
