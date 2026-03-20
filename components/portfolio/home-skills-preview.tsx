@@ -111,3 +111,5 @@ export function HomeSkillsPreview() {
     </section>
   )
 }
+
+// home: skills preview
