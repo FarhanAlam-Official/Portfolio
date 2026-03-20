@@ -78,3 +78,5 @@ export function MagneticSocial() {
     </div>
   )
 }
+
+// social: magnetic hover
