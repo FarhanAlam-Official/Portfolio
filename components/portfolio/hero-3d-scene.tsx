@@ -206,3 +206,5 @@ export function Hero3DScene() {
     </div>
   )
 }
+
+// hero-3d: Three.js scene
