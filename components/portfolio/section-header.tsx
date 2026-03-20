@@ -42,3 +42,5 @@ export function SectionHeader({ badge, title, description }: SectionHeaderProps)
     </div>
   )
 }
+
+// section-header: reusable
