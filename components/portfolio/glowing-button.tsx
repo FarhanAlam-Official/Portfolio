@@ -55,3 +55,5 @@ export function GlowingButton({ href, children, variant = "primary", className =
     </Link>
   )
 }
+
+// button: glow + ripple
