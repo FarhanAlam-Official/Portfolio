@@ -16,3 +16,5 @@ export default function HomePage() {
     </PageLayout>
   )
 }
+
+// page: SEO + Open Graph
