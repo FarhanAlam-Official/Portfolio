@@ -6,8 +6,8 @@ import "./globals.css"
 
 import { Geist, Geist_Mono, Geist as V0_Font_Geist, Geist_Mono as V0_Font_Geist_Mono, Source_Serif_4 as V0_Font_Source_Serif_4, Space_Grotesk } from 'next/font/google'
 
-// Import centralized data
-import { personalInfo } from "@/lib/data"
+// Import centralized data from CMS-backed content.json (via lib/content-reader)
+import { personalInfo } from "@/lib/content-reader"
 
 // Initialize fonts
 const _geist = V0_Font_Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
@@ -53,3 +53,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+// layout: font + theme
