@@ -13,3 +13,5 @@ export default function SkillsPage() {
     </PageLayout>
   )
 }
+
+// skills: JSON-LD data
