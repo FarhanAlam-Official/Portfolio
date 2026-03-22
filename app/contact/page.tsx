@@ -13,3 +13,5 @@ export default function ContactPage() {
     </PageLayout>
   )
 }
+
+// contact: schema markup
