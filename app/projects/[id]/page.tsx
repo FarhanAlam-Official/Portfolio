@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation"
 import { PageLayout } from "@/components/portfolio/page-layout"
 import { ProjectDetailContent } from "@/components/portfolio/project-detail-content"
-import { projects } from "@/lib/projects-data"
+import { projects, personalInfo } from "@/lib/content-reader"
 
 interface ProjectPageProps {
   params: Promise<{ id: string }>
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: ProjectPageProps) {
   }
 
   return {
-    title: `${project.title} | Farhan Alam`,
+    title: `${project.title} | ${personalInfo.name}`,
     description: project.description,
   }
 }
