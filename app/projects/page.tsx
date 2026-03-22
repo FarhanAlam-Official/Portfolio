@@ -13,3 +13,5 @@ export default function ProjectsPage() {
     </PageLayout>
   )
 }
+
+// projects: SSR listing
