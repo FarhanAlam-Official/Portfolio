@@ -55,3 +55,5 @@ export function AnimatedText({ text, className = "", delay = 0 }: AnimatedTextPr
     </motion.span>
   )
 }
+
+// animated-text: hero integration
