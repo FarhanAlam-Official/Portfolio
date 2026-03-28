@@ -219,3 +219,5 @@ export type Stats = z.infer<typeof StatsSchema>
 export type Theme = z.infer<typeof ThemeSchema>
 
 // schema: zod validation
+
+// fix: schema TS inference
