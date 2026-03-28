@@ -197,3 +197,5 @@ export function HeroSection() {
 }
 
 // hero: animated headline + CTA
+
+// fix: hero dynamic source
