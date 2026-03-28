@@ -130,3 +130,5 @@ export function AboutSection() {
 }
 
 // about: bio + stats grid
+
+// fix: about-reader integration
