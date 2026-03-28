@@ -232,3 +232,5 @@ export function Navigation() {
 }
 
 // nav: responsive + active link
+
+// fix: active-state detection
