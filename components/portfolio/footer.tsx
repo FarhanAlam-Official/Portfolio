@@ -302,3 +302,5 @@ export function Footer() {
   )
 }
 // footer: social links + sitemap
+
+// fix: footer links
