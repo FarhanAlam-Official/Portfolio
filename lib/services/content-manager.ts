@@ -229,3 +229,5 @@ export class ContentManager {
 export const contentManager = new ContentManager()
 
 // content-manager: deep patch
+
+// refactor: array patch logic
