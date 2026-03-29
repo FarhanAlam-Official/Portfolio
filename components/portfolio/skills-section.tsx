@@ -94,3 +94,5 @@ export function SkillsSection() {
 }
 
 // skills: category grouping
+
+// fix: skills reader binding
