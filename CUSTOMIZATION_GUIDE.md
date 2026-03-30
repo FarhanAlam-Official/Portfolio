@@ -356,3 +356,5 @@ Your portfolio is now personalized! Remember:
 - Showcase your best work
 
 Good luck with your portfolio! 🚀
+
+<!-- docs: customization guide -->
