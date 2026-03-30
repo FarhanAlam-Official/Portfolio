@@ -179,3 +179,5 @@ After making changes, check:
 ---
 
 **Need more help?** Check [CUSTOMIZATION_GUIDE.md](CUSTOMIZATION_GUIDE.md) for detailed instructions!
+
+<!-- docs: quick start guide -->
