@@ -234,5 +234,3 @@
 .animate-spin-very-slow {
   animation: spin-slow 40s linear infinite;
 }
-
-// global: dark-mode tokens
