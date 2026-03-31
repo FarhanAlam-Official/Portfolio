@@ -80,4 +80,15 @@ Thumbs.db
 *.tmp
 *.temp
 
+/.kiro
+/.qoder
+/.qodo
+/.vscode
+
+/bacdate-commits.ps1
+
+/scripts/backdate-commits.ps1
+/scripts/backdate-remaining.ps1
+
 <!-- gitignore: build + env -->
+
