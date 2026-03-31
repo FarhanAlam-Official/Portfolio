@@ -17,10 +17,15 @@ const navItems = [
   { label: "Contact", href: "/contact" },
 ]
 
+
+import { useRouter } from "next/navigation"
+
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [clickCount, setClickCount] = useState(0)
   const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +40,17 @@ export function Navigation() {
     setIsMobileMenuOpen(false)
   }, [pathname])
 
+  useEffect(() => {
+    if (clickCount >= 5) {
+      setClickCount(0);
+      router.push("/dashboard");
+    }
+  }, [clickCount, router]);
+
+  const handleNavbarClick = () => {
+    setClickCount((c) => c + 1);
+  };
+
   return (
     <>
       <motion.header
@@ -42,6 +58,7 @@ export function Navigation() {
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
         className="fixed top-0 left-0 right-0 z-50"
+        onClick={handleNavbarClick}
       >
         {/* Ambient glow effect */}
         <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
