@@ -1,8 +1,7 @@
+
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { verifySession } from '@/lib/services/session-manager';
-
-export const runtime = 'nodejs';
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
