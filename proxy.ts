@@ -2,10 +2,9 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { verifySession } from '@/lib/services/session-manager';
 
-// Use Node.js runtime instead of Edge runtime for crypto support
 export const runtime = 'nodejs';
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Protect dashboard routes
@@ -37,7 +36,7 @@ export async function middleware(request: NextRequest) {
       });
     } catch (error) {
       // Any error during verification - redirect to login
-      console.error('[Middleware] Session verification error:', error);
+      console.error('[Proxy] Session verification error:', error);
       return NextResponse.redirect(new URL('/login', request.url));
     }
   }
@@ -49,4 +48,4 @@ export const config = {
   matcher: ['/dashboard/:path*'],
 };
 
-// middleware: route protection
+// proxy: route protection
