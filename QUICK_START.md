@@ -2,18 +2,18 @@
 
 ## 📍 Where to Update What
 
-| What You Want to Change | File to Edit | Lines |
-|------------------------|-------------|-------|
-| **Your name & title** | `lib/data.ts` | 8-10 |
-| **Email address** | `lib/data.ts` | 44 |
-| **GitHub/LinkedIn** | `lib/data.ts` | 51-53 |
-| **About me text** | `lib/data.ts` | 22-30 |
-| **Work experience** | `lib/data.ts` | 80-165 |
-| **Skills & levels** | `lib/data.ts` | 205-255 |
-| **Education** | `lib/data.ts` | 170-200 |
-| **Projects** | `lib/projects-data.ts` | Entire file |
-| **Profile photo** | `/public/user.png` | Replace file |
-| **Project images** | `/public/*.jpg` | Replace files |
+| What You Want to Change | File to Edit           | Lines         |
+| ----------------------- | ---------------------- | ------------- |
+| **Your name & title**   | `lib/data.ts`          | 8-10          |
+| **Email address**       | `lib/data.ts`          | 44            |
+| **GitHub/LinkedIn**     | `lib/data.ts`          | 51-53         |
+| **About me text**       | `lib/data.ts`          | 22-30         |
+| **Work experience**     | `lib/data.ts`          | 80-165        |
+| **Skills & levels**     | `lib/data.ts`          | 205-255       |
+| **Education**           | `lib/data.ts`          | 170-200       |
+| **Projects**            | `lib/projects-data.ts` | Entire file   |
+| **Profile photo**       | `/public/user.png`     | Replace file  |
+| **Project images**      | `/public/*.jpg`        | Replace files |
 
 ## 🎯 Essential Updates (Must Do!)
 
@@ -26,7 +26,7 @@ export const personalInfo = {
   title: "YOUR JOB TITLE",
   bio: "YOUR SHORT BIO",
   // ...
-}
+};
 ```
 
 ### 2. Contact (2 minutes)
@@ -69,7 +69,7 @@ export const experience = [
     endDate: "Present",
     // ... more details
   },
-]
+];
 ```
 
 ### 6. Skills (10 minutes)
@@ -79,7 +79,7 @@ export const experience = [
 languages: [
   { name: "JavaScript", level: 95, years: 5 },
   // Add your skills with honest levels
-]
+];
 ```
 
 ### 7. Projects (30 minutes)
